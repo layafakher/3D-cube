@@ -4,6 +4,16 @@ html {
     background-attachment: fixed;
 
 }
+@keyframes moveCube {
+    from{
+        transform: rotateY(0) scale(1);
+    }
+
+    to{
+        transform: rotateY(360deg) scale(1.2);
+
+    }
+}
 .content{
     margin-bottom: 2rem;
 }
@@ -28,7 +38,7 @@ html {
     width: 100%;
     transform-style: preserve-3d;
     transition: all 2s cubic-bezier(0.79, 0.03, 0.26, 1.02) ;
-    
+    animation: moveCube 4s ease-in 2s 2 alternate;
 }
 .cube:hover{
     transform: rotateX(360deg);
